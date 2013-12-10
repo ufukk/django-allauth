@@ -512,9 +512,7 @@ class LogoutView(TemplateResponseMixin, View):
         return redirect(url)
 
     def logout(self):
-        get_adapter().add_message(self.request,
-                                  messages.SUCCESS,
-                                  'account/messages/logged_out.txt')
+        #get_adapter().add_message(self.request,messages.SUCCESS,'account/messages/logged_out.txt')
         auth_logout(self.request)
 
     def get_context_data(self, **kwargs):
